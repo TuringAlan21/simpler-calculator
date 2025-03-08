@@ -7,6 +7,8 @@ const plusBtn = document.getElementById('plus');
 const minusBtn = document.getElementById('minus');
 const divideBtn = document.getElementById('divide');
 const multiplyBtn = document.getElementById('multiply');
+const clearBtn = document.getElementById('clear');
+const inputs = document.querySelectorAll('.input');
 
 class Calculator {
     constructor(num1, num2) {
@@ -47,4 +49,7 @@ plusBtn.addEventListener('click', () => calculator.logSum());
 minusBtn.addEventListener('click', () => calculator.logSub());
 divideBtn.addEventListener('click', () =>  calculator.logDiv());
 multiplyBtn.addEventListener('click', () => calculator.logMul());
-
+clearBtn.addEventListener('click', function(){
+inputs.forEach(input => input.value = '')
+resultDiv.innerHTML = ''
+})
