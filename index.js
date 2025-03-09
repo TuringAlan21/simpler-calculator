@@ -36,7 +36,12 @@ class Calculator {
         resultDiv.innerHTML = this.setX() / this.setY()
     }
     logSub(){
-        resultDiv.innerHTML = this.setX() - this.setY()
+        if(this.num1 === 0 || this.num2 === 0) {
+            throw new Error("You are dividing by zero")
+        }else{
+            resultDiv.innerHTML = this.setX() - this.setY()
+        }
+        
     }
 
 }
